@@ -69,7 +69,13 @@
                 <div class="device">
                   <div class="screen">
                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                    <img src="img/demo-screen-2.jpg" class="img-fluid" alt="">
+<!--                    <img src="img/demo-screen-2.jpg" class="img-fluid" alt="">-->
+                    <div class="w3-content w3-section">
+						<img class="mySlides img-fluid" src="img/demo-screen-2.jpg">
+						<img class="mySlides img-fluid" src="img/demo-screen-3.jpg">
+      					<img class="mySlides img-fluid" src="img/demo-screen-4.jpg">
+       					<img class="mySlides img-fluid" src="img/demo-screen-7.jpg">
+        			</div>
                   </div>
                   <div class="button">
                     <!-- You can hook the "home button" to some JavaScript events or just remove it -->
@@ -100,8 +106,8 @@
     <section class="features" id="features">
       <div class="container">
         <div class="section-heading text-center">
-          <h2>Unlimited Features, Unlimited Fun</h2>
-          <p class="text-muted">Check out what you can do with this app theme!</p>
+          <h2>Less Time Lost, More Time Saved</h2>
+          <p class="text-muted">Check out what you can do with UCRMaps!</p>
           <hr>
         </div>
         <div class="row">
@@ -111,7 +117,13 @@
                 <div class="device">
                   <div class="screen">
                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                    <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
+<!--                    <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">-->
+                    <div class="w3-content w3-section">
+						<img class="mySlides1 img-fluid" src="img/demo-screen-1.jpg">
+						<img class="mySlides1 img-fluid" src="img/demo-screen-9.jpg">
+      					<img class="mySlides1 img-fluid" src="img/demo-screen-5.jpg">
+       					<img class="mySlides1 img-fluid" src="img/demo-screen-6.jpg">
+        			</div>
                   </div>
                   <div class="button">
                     <!-- You can hook the "home button" to some JavaScript events or just remove it -->
@@ -148,9 +160,9 @@
                 </div>
                 <div class="col-lg-6">
                   <div class="feature-item">
-                    <i class="icon-lock-open text-primary"></i>
-                    <h3>Open Source</h3>
-                    <p class="text-muted">Since UCRMaps was built completely useing Open-Source libraries, you can use it commercially!</p>
+                    <i class="fa fa-calendar text-primary"></i>
+                    <h3>School Events</h3>
+                    <p class="text-muted">Never miss another school event with up to date info on Student Development Workshops, ASUCR Events/Concerts, and Undergraduate Reasearch Opportunites!</p>
                   </div>
                 </div>
               </div>
@@ -223,5 +235,29 @@
     <script src="js/new-age.min.js"></script>
 
   </body>
+       <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+		var x1 = document.getElementsByClassName("mySlides1");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+		   x1[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";
+		x1[myIndex-1].style.display = "block"; 
+        setTimeout(carousel, 3500); // Change image every 6 seconds
+        }
+	</script>
+
+  
+  
+  
+  
 
 </html>
